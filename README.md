@@ -371,7 +371,7 @@ rebuild for larger inputs.
 
 The 2005 source did not compile on macOS or under recent gcc/clang because
 of a name collision and several implicit-int constructs that ceased to be
-valid C in C99. Behavior is unchanged; the diff is mechanical.
+valid C in C99. 
 
 - The global `index` was renamed to `founder_marker_idx`. The original name
   collides with the POSIX `index()` function declared in `<strings.h>`,
@@ -384,10 +384,7 @@ valid C in C99. Behavior is unchanged; the diff is mechanical.
   `possibilities[-1]` on its first iteration.
 - A small number of stack-allocated variable-length arrays were replaced
   with fixed-size buffers tied to the existing `MAX_LOCUS` and `MAX_ALLELE`
-  constants. This removes a portability hazard without changing capacity.
-
-Output from the rebuilt binary is byte-identical to the original
-precompiled binaries on every example in `examples/`.
+  constants. 
 
 ---
 
