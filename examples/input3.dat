@@ -1,0 +1,16 @@
+pedin3.pre pedfile3.pre << name of pedigree file, name of output file  
+1344 2673 12228   << three random seeds 
+0 1 << # of columns for affection status/quantitative trait, X-chromosome data to be generated
+1000 << number of replicates
+20 2   << Total # of marker loci, # of times the pattern will be repeated
+1 << "1" recomb fraction, "2" Kosambi map distance & "3" Haldane map distance
+10 0.01 0.05 0.05 0.09 0.01 0.01 0.02 0.05 0.01 0.05 << intermarker recombination fractions
+2 3 2 << "2" genotype data will be provided,  # of marker loci, # of times pattern repeated
+2 0.3 << marker 1, with 2 alleles and the allele freq. for the first allele
+2 0.4 << marker 2, with 2 alleles and the allele freq. for the first allele
+2 0.2 << marker 3, with 2 alleles and the allele freq. for the first allele
+2 2 1 << 2" genotype data will be provided,  # of marker loci, # of times pattern repeated 
+3 0.7 0.1 << marker 7, with 3 alleles and the allele freq. for the first two alleles
+6 0.1 0.1 0.1 0.1 0.1 << marker 8, with 6 alleles and the allele freq. for the first five alleles
+2 1 2 << 2" genotype data will be provided,  # of marker loci, # of times pattern repeated 
+2 0.5 marker << marker 9, with 2 alleles and the allele freq. for the first allele

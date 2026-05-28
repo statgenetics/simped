@@ -1,0 +1,25 @@
+pedin4.pre pedfile4.pre << name of pedigree file, name of output file
+2312 1678 13247   << three random seeds 
+1  0 << # of columns for affection status/quantitative trait, autosomal data to be generated
+1000 << number of replicates
+220 10 << Total # of marker loci, # of times pattern should be repeated 
+1 << "1" recomb fraction, "2" Kosambi map distance & "3" Haldane map distance
+22 0.05 0.07 0.05 0.1 0.03 0.04 0.0 0.0 0.0 0.0 0.05 0.001 0.0 0.0 0.0 0 0.07 0.0 0.05 0.0 0.03 0.0  
+2 2 3 << "2" genotype data, # of marker loci, # of times the pattern should be repeated
+2 0.4 << marker 2, with 2 alleles and the allele freq. for the first allele
+2 0.5 << marker 3, with 2 alleles and the allele freq. for the first allele
+1 8 5  2 << "1" for haplotypes, number of haplotypes,  number of marker loci
+0.35   0.15   0.10   0.08   0.08    0.08   0.08   0.08   << the frequency for each haplotype
+1 1 1 1 1 < << observed alleles for each haplotype
+2 2 2 2 2
+1 1 2 2 2 
+1 2 1 2 1 
+1 1 1 1 2
+2 2 2 1 1
+1 1 2 2 1 
+2 2 2 1 1
+1 3 2 3
+0.6 0.3 0.1
+2 2
+1 2
+1 1
