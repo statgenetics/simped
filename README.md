@@ -9,7 +9,7 @@ or map distances. The two modes can be interleaved within a single
 simulation. SimPed handles diallelic and multiallelic markers and has been
 exercised on simulations with more than 20,000 loci.
 
-This repository hosts a modernized build of the original 2005 SimPed source
+This repository hosts a modified version of the original 2005 SimPed source
 that compiles cleanly with current C compilers (clang or gcc, `-std=c99` or
 later) on macOS, Linux, and Windows. The algorithm and output format are
 unchanged; output is byte-identical to the original precompiled binaries on
@@ -23,35 +23,17 @@ Heredity 60(2):119–122 (2005). PMID: [16224187](https://pubmed.ncbi.nlm.nih.go
 
 ## Contents
 
-1. [Repository layout](#repository-layout)
-2. [Installation](#installation)
-3. [Running SimPed](#running-simped)
-4. [Input files](#input-files)
+1. [Installation](#installation)
+2. [Running SimPed](#running-simped)
+3. [Input files](#input-files)
    - [Pedigree file](#pedigree-file)
    - [Parameter file](#parameter-file)
-5. [Worked examples](#worked-examples)
-6. [Output file](#output-file)
-7. [Algorithm](#algorithm)
-8. [Compile-time limits](#compile-time-limits)
-9. [Changes from the upstream source](#changes-from-the-upstream-source)
-10. [License and contact](#license-and-contact)
-
----
-
-## Repository layout
-
-```
-.
-├── src/                C source (single translation unit: simped.c)
-├── examples/           Parameter files (input*.dat) and pedigrees (pedin*.pre)
-├── executable/         Original precompiled binaries from upstream, unzipped
-│   ├── linux/          ELF 32-bit Intel
-│   ├── macos/          Mach-O x86_64 (runs on Apple Silicon via Rosetta)
-│   └── windows/        simped.exe + cygwin1.dll (Cygwin build)
-├── Makefile
-├── README.md
-└── .gitignore
-```
+4. [Worked examples](#worked-examples)
+5. [Output file](#output-file)
+6. [Algorithm](#algorithm)
+7. [Compile-time limits](#compile-time-limits)
+8. [Changes from the upstream source](#changes-from-the-upstream-source)
+9. [License and contact](#license-and-contact)
 
 ---
 
@@ -71,13 +53,7 @@ make install                      # installs to /usr/local/bin
 make install PREFIX=$HOME/.local  # user-local install, no sudo
 ```
 
-To compile without `make`:
-
-```sh
-cc -O2 -std=c99 -o simped src/simped.c -lm
-```
-
-### Use a precompiled binary
+### Use a precompiled binary (not maintained; use as-is)
 
 The `executable/` directory contains the original 2005/2007 distribution
 binaries, organized by platform.
@@ -418,6 +394,6 @@ precompiled binaries on every example in `examples/`.
 ## License and contact
 
 The upstream distribution did not include an explicit software license.
-The original program and documentation are © Xiaoming Leal and Suzanne M.
+The original program and documentation is © Suzanne M.
 Leal (2005). For redistribution terms or questions about the underlying
 algorithm, contact the original authors.
